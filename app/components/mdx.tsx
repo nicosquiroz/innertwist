@@ -1,3 +1,6 @@
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import { InlineMath, BlockMath } from 'react-katex'
 import Link from 'next/link'
 import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
@@ -97,6 +100,8 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
+  InlineMath,
+  BlockMath,
 }
 
 export function CustomMDX(props) {
@@ -104,6 +109,11 @@ export function CustomMDX(props) {
     <MDXRemote
       {...props}
       components={{ ...components, ...(props.components || {}) }}
+      // Añadir los plugins remarkMath y rehypeKatex para procesar el contenido
+      mdxOptions={{
+        remarkPlugins: [remarkMath],  // Para procesar $latex$ en línea
+        rehypePlugins: [rehypeKatex],  // Para procesar $$latex$$ en bloque
+      }}
     />
   )
 }
