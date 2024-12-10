@@ -7,6 +7,7 @@ export default function Page() {
         INNERTWIST
       </h1>
       <p className="mb-4">
+        {'Explicar qué es innertwist, quiénes somos y qué publicamos aquí. Trabajos terminados? O procesos de aprendizaje?'}
         {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
         Vim's keystroke commands and tabs' flexibility for personal viewing
         preferences. This extends to my support for static typing, where its
