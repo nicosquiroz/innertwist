@@ -147,3 +147,26 @@ table {
 .title {
   text-wrap: balance;
 }
+
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 1024px) {
+  .full-bleed {
+    margin-left: -1rem;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .full-bleed {
+    margin-left: -1.5rem;
+    transform: none;
+  }
+}
